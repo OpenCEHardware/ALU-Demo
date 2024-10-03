@@ -1,0 +1,71 @@
+site_name:  ScaleCore-V Documentation
+repo_name: OpenCEHardware/ALU-Demo
+repo_url: https://github.com/OpenCEHardware/ALU-Demo
+extra_css:
+  - css/extra.css
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/CElogo.png
+  favicon: assets/CElogo.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - header.autohide
+    - navigation.footer
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: cyan
+      accent: light blue
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: cyan
+      accent: light blue
+plugins:
+  - search
+  - print-site:
+      path_to_pdf: "assets/ALU.pdf"
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - markdown_include.include:
+        base_path: docs
+nav:
+  - Arithmetic Logic Unit: alu.md
+  - About: about.md
+copyright: |
+  &copy; 2024 <a href="https://github.com/OpenCEHardware"  target="_blank" rel="noopener">OpenCEHardware</a>
